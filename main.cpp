@@ -1,6 +1,8 @@
 #include <windows.h>
 
-int nRandWidth = 150, nRandHeight = 15, nSpeed = 1;
+int nSpeed = 100; // скорость "волны"
+int nRandWidth = 5; // ширина "волны"
+int nRandHeight = 5; // высота "волны"
 int nScreenWidth, nScreenHeight;
 
 LRESULT WINAPI MelterProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
@@ -62,7 +64,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpCmdLine, int 
     if (!hWnd)
         return MessageBox(HWND_DESKTOP, "Cannot create window!", NULL, MB_ICONERROR | MB_OK);
 
-    srand(GetTickCount64());
+    srand(GetTickCount());
     MSG Msg = {0};
     while (Msg.message != WM_QUIT)
     {
@@ -76,4 +78,3 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpCmdLine, int 
     }
     return 0;
 }
-в
