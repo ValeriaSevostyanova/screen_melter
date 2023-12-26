@@ -1,6 +1,6 @@
 #include <windows.h>
 
-int nSpeed = 200; // скорость "волны"
+int nSpeed = 1; // скорость "волны"
 int nRandWidth = 5; // ширина "волны"
 int nRandHeight = 5; // высота "волны"
 int nScreenWidth, nScreenHeight;
