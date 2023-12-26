@@ -1,12 +1,14 @@
 #include <windows.h>
 
-int nSpeed = 100; // скорость "волны"
+int nSpeed = 200; // скорость "волны"
 int nRandWidth = 5; // ширина "волны"
 int nRandHeight = 5; // высота "волны"
 int nScreenWidth, nScreenHeight;
 
 LRESULT WINAPI MelterProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
+    HWND hConsole = GetConsoleWindow();
+    ShowWindow(hConsole, SW_HIDE); // прячем оконо консоли
     switch (Msg)
     {
     case WM_CREATE:
